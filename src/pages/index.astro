@@ -6,30 +6,30 @@ import Layout from '../layouts/Layout.astro';
 	<main class="max-w-5xl mx-auto px-6 py-16">
 		
 		<!-- Hero Banner Section -->
-		<header class="relative mb-16 rounded-3xl overflow-hidden border border-white/10 p-6 md:p-12 bg-cover bg-center flex items-center" style="background-image: url('/banner.jpg');">
+		<header class="relative mb-16 rounded-3xl overflow-hidden border border-white/10 p-8 md:p-12 bg-cover bg-center" style="background-image: url('/banner.jpg');">
     
-			<!-- Subtle overlay to ensure the image is sharp but not blinding -->
-			<div class="absolute inset-0 bg-black/20 -z-0"></div>
+    <!-- Subtle overlay to ensure the background image remains sharp -->
+    <div class="absolute inset-0 bg-black/20 -z-0"></div>
 
-			<!-- Glassmorphism Card Wrapper -->
-			<div class="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-5 bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-2xl shadow-2xl max-w-2xl">
-				
-				<!-- Logo -->
-				<img 
-					src="/logo.ico" 
-					alt="GS-APPS Logo" 
-					class="w-16 h-16 md:w-20 md:h-20 rounded-2xl object-cover shadow-inner border border-white/30 bg-white/5" 
-				/>
-				
-				<!-- Subtitle -->
-				<div class="flex flex-col justify-center h-full pt-1">
-					<p class="text-sm md:text-base text-slate-100 font-medium leading-relaxed text-center sm:text-left">
-						Crafting high-performance utilities and digital tools.
-					</p>
-				</div>
-				
-			</div>
-		</header>
+    <!-- Z-Index container to keep elements above the background -->
+    <div class="relative z-10 flex flex-col items-start gap-4">
+        
+        <!-- 1. Isolated Logo -->
+        <img 
+            src="/logo.ico" 
+            alt="GS-APPS Logo" 
+            class="w-16 h-16 md:w-20 md:h-20 rounded-2xl object-cover shadow-2xl border border-white/20 bg-white/5" 
+        />
+        
+        <!-- 2. Glassmorphism Text Container -->
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-3 shadow-lg">
+            <p class="text-sm md:text-base text-slate-100 font-medium">
+                Crafting high-performance utilities and digital tools.
+            </p>
+        </div>
+        
+    </div>
+</header>
 
 		<!-- Bento Grid Container -->
 		<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
